@@ -19,26 +19,26 @@ else
   num_thread="${1}"
 fi
 
-if [ -z "${1}" ]; then
+if [ -z "${2}" ]; then
   type_seq="SingleEnded"
 else
-  type_seq="${1}"
-fi
-
-if [ -z "${2}" ]; then
-  len_frag=""
-else
-  len_frag="-l ${2}"
+  type_seq="${2}"
 fi
 
 if [ -z "${3}" ]; then
-  std_frag=""
+  len_frag=""
 else
-  std_frag="-s ${3}"
+  len_frag="-l ${3}"
 fi
 
 if [ -z "${4}" ]; then
+  std_frag=""
+else
+  std_frag="-s ${4}"
+fi
+
+if [ -z "${5}" ]; then
   num_boot=""
 else
-  num_boot="-b ${4}"
+  num_boot="-b ${5}"
 fi
