@@ -31,3 +31,8 @@ else
   std_frag="-s ${3}"
 fi
 
+if [ -z "${4}" ]; then
+  num_boot=""
+else
+  num_boot="-b ${4}"
+fi
