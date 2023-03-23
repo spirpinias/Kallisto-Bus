@@ -14,6 +14,12 @@ fi
 # Kallisto
 
 if [ -z "${1}" ]; then
+  num_thread=$(get_cpu_count.py)
+else
+  num_thread="${1}"
+fi
+
+if [ -z "${1}" ]; then
   type_seq="SingleEnded"
 else
   type_seq="${1}"
