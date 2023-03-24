@@ -18,6 +18,8 @@ then
         ${num_boot} \
         --single \
         --pseudobam \
+        -gtf ${gtf_file} \
+        --genomebam \
         ${len_frag} \
         ${std_frag} \
         ${forward_reads} \
@@ -30,6 +32,8 @@ then
         -o ../results/ \
         -t ${num_thread} \
         --pseudobam \
+        --gtf ${gtf_file} \
+        --genomebam \
         ${num_boot} \
         ${len_frag} \
         ${std_frag} \
