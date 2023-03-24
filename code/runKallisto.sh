@@ -10,21 +10,27 @@ reverse_reads=$(find -L ../data -name "*_R2.fastq.gz" -o -name "*_R2.fq.gz")
 kallisto index -i ../scratch/transcripts.idx ${reference_file}
 
 
-kallisto quant -i ../scratch/transcripts.idx -o ../results/testing_one ${num_boot} --single ${len_frag} ${std_frag} ${forward_reads} -t ${num_thread}
-
-#if [ "${type_seq}" == "SingleEnded" ];
-#then
+if [ "${type_seq}" == "SingleEnded" ];
+then
     # Quantification
-    
-#else
- #   # Quantification
-  #  kallisto quant \
-  #  -i ../scratch/transcripts.idx \
-   # -o ../results/testing_one \
-    #-t ${num_thread} \
-   # ${num_boot} \
-   # ${len_frag} \
-    #${std_frag} \
-    #${forward_reads} \
-    #${reverse_reads}
-#fi
+    kallisto quant \
+    -i ../scratch/transcripts.idx \
+    -o ../results/testing_one \
+    ${num_boot} \
+    --single \
+    ${len_frag} \
+    ${std_frag} \
+    ${forward_reads} \
+    -t ${num_thread}
+else
+    # Quantification
+    kallisto quant \
+    -i ../scratch/transcripts.idx \
+    -o ../results/testing_one \
+    -t ${num_thread} \
+    ${num_boot} \
+    ${len_frag} \
+    ${std_frag} \
+    ${forward_reads} \
+    ${reverse_reads}
+fi
