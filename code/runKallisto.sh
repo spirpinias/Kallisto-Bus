@@ -20,6 +20,7 @@ then
         --pseudobam \
         --gtf ${gtf_file} \
         --genomebam \
+        --chromosomes \
         ${len_frag} \
         ${std_frag} \
         ${forward_reads} \
@@ -34,6 +35,7 @@ then
         --pseudobam \
         --gtf ${gtf_file} \
         --genomebam \
+        --chromosomes \
         ${num_boot} \
         ${len_frag} \
         ${std_frag} \
