@@ -26,6 +26,8 @@ else
     -o ../results/testing_one \
     -t ${num_thread} \
     ${num_boot} \
+    ${len_frag} \
+    ${std_frag} \
     ${forward_reads} \
     ${reverse_reads}
 fi
