@@ -9,7 +9,6 @@ reverse_reads=$(find -L ../data -name "*_R2.fastq.gz" -o -name "*_R2.fq.gz")
 # Construction of the Index
 kallisto index -i ../scratch/transcripts.idx ${reference_file}
 
-
 if [ "${type_seq}" == "SingleEnded" ];
 then
     # Quantification
