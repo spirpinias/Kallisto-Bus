@@ -19,6 +19,7 @@ then
 
     if [ "${type_seq}" == "SingleEnded" ];
     then
+        echo "You are running in Single Ended Mode!"
         # Quantification
         kallisto quant \
         -i ../scratch/transcripts.idx \
@@ -30,6 +31,7 @@ then
         ${forward_reads} \
         -t ${num_thread}
     else
+        echo "You are running in Paired Ended Mode!"
         # Quantification
         kallisto quant \
         -i ../scratch/transcripts.idx \
