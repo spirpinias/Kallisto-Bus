@@ -12,29 +12,33 @@ reverse_count=$(echo $reverse_reads | wc -w)
 
 # Construction of the Index
 
-kallisto index -i ../scratch/transcripts.idx ${reference_file}
-
-if [ "${type_seq}" == "SingleEnded" ];
+if [ "${reference_count}" -eq 1 ];
 then
-    # Quantification
-    kallisto quant \
-    -i ../scratch/transcripts.idx \
-    -o ../results/ \
-    ${num_boot} \
-    --single \
-    ${len_frag} \
-    ${std_frag} \
-    ${forward_reads} \
-    -t ${num_thread}
-else
-    # Quantification
-    kallisto quant \
-    -i ../scratch/transcripts.idx \
-    -o ../results/ \
-    -t ${num_thread} \
-    ${num_boot} \
-    ${len_frag} \
-    ${std_frag} \
-    ${forward_reads} \
-    ${reverse_reads}
+    
+    kallisto index -i ../scratch/transcripts.idx ${reference_file}
+
+    if [ "${type_seq}" == "SingleEnded" ];
+    then
+        # Quantification
+        kallisto quant \
+        -i ../scratch/transcripts.idx \
+        -o ../results/ \
+        ${num_boot} \
+        --single \
+        ${len_frag} \
+        ${std_frag} \
+        ${forward_reads} \
+        -t ${num_thread}
+    else
+        # Quantification
+        kallisto quant \
+        -i ../scratch/transcripts.idx \
+        -o ../results/ \
+        -t ${num_thread} \
+        ${num_boot} \
+        ${len_frag} \
+        ${std_frag} \
+        ${forward_reads} \
+        ${reverse_reads}
+    fi
 fi
