@@ -51,3 +51,9 @@ if [ -z "${5}" ]; then
 else
   num_boot="-b ${5}"
 fi
+
+if [ -z "${6}" ]; then
+  kmer_size=""
+else
+  kmer_size="-k ${6}"
+fi

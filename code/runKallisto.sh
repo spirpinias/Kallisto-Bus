@@ -6,7 +6,7 @@ if [ $reference_count -eq 1 ] && [ $gtf_count -eq 1 ];
 then
 
     # Construction of the Index    
-    kallisto index -i ../scratch/transcripts.idx ${reference_file}
+    kallisto index -i ../scratch/transcripts.idx ${reference_file} ${kmer_size}
 
     if [ "${type_seq}" == "SingleEnded" ];
     then
