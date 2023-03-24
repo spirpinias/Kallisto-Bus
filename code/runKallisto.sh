@@ -30,7 +30,6 @@ then
         -o ../results/ \
         -t ${num_thread} \
         --pseudobam \
-        
         ${num_boot} \
         ${len_frag} \
         ${std_frag} \
