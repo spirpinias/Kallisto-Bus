@@ -1,0 +1,29 @@
+kallisto 0.48.0
+Quantifies abundance from pre-computed transcript-compatibility counts
+
+Usage: kallisto quant-tcc [arguments] transcript-compatibility-counts-file
+
+Required arguments:
+-o, --output-dir=STRING       Directory to write output to
+
+Optional arguments:
+-i, --index=STRING            Filename for the kallisto index to be used
+                              (required if file with names of transcripts not supplied)
+-T, --txnames=STRING          File with names of transcripts
+                              (required if index file not supplied)
+-e, --ec-file=FILE            File containing equivalence classes
+                              (default: equivalence classes are taken from the index)
+-f, --fragment-file=FILE      File containing fragment length distribution
+                              (default: effective length normalization is not performed)
+-l, --fragment-length=DOUBLE  Estimated average fragment length
+-s, --sd=DOUBLE               Estimated standard deviation of fragment length
+                              (note: -l, -s values only should be supplied when
+                               effective length normalization needs to be performed
+                               but --fragment-file is not specified)
+-t, --threads=INT             Number of threads to use (default: 1)
+-g, --genemap                 File for mapping transcripts to genes
+                              (required for obtaining gene-level abundances)
+-G, --gtf=FILE                GTF file for transcriptome information
+                              (can be used instead of --genemap for obtaining gene-level abundances)
+-b, --bootstrap-samples=INT   Number of bootstrap samples (default: 0)
+    --seed=INT                Seed for the bootstrap sampling (default: 42)
