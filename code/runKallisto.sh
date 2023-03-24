@@ -25,7 +25,7 @@ else
     # Quantification
     kallisto quant \
     -i ../scratch/transcripts.idx \
-    -o ../results/testing_one \
+    -o ../results/ \
     -t ${num_thread} \
     ${num_boot} \
     ${len_frag} \
