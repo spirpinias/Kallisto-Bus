@@ -12,7 +12,7 @@ reverse_count=$(echo $reverse_reads | wc -w)
 
 # Construction of the Index
 
-if [ "${reference_count}" -eq 1 ];
+if [ ${reference_count} -eq 1 ];
 then
     
     kallisto index -i ../scratch/transcripts.idx ${reference_file}
