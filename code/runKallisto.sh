@@ -8,7 +8,7 @@ reverse_reads=$(find -L ../data -name "*_R2.fastq.gz" -o -name "*_R2.fq.gz")
 
 reference_count=$(echo $reference_files | wc -w) 
 forward_count=$(echo $forward_reads | wc -w)
-reverse_count$(echo $reverse_reads | wc -w)
+reverse_count=$(echo $reverse_reads | wc -w)
 
 # Construction of the Index
 
