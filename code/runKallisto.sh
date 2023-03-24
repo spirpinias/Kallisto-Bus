@@ -11,14 +11,7 @@ if [ "${type_seq}" == "SingleEnded" ];
 then
     # Quantification
     kallisto quant \
-    -i ../scratch/transcripts.idx \
-    -o ../results/testing_one \
-    -t ${num_thread} \
-    ${num_boot} \
-    --single \
-    ${len_frag} \
-    ${std_frag} \
-    ${forward_reads}
+    -i ../scratch/transcripts.idx -o ../results/testing_one -t ${num_thread} ${num_boot} --single ${len_frag} ${std_frag} ${forward_reads}
 else
     # Quantification
     kallisto quant \
