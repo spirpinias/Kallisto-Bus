@@ -17,6 +17,7 @@ then
         -o ../results/ \
         ${num_boot} \
         --single \
+        --pseudobam \
         ${len_frag} \
         ${std_frag} \
         ${forward_reads} \
@@ -28,6 +29,8 @@ then
         -i ../scratch/transcripts.idx \
         -o ../results/ \
         -t ${num_thread} \
+        --pseudobam \
+        
         ${num_boot} \
         ${len_frag} \
         ${std_frag} \
