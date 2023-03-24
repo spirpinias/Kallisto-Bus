@@ -18,7 +18,7 @@ then
         ${num_boot} \
         --single \
         --pseudobam \
-        -gtf ${gtf_file} \
+        --gtf ${gtf_file} \
         --genomebam \
         ${len_frag} \
         ${std_frag} \
