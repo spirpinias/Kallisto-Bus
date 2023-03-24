@@ -10,7 +10,7 @@ kallisto index -i ../scratch/transcripts.idx ${reference_file}
 if [ "${type_seq}" == "SingleEnded" ];
 then
     # Quantification
-    kallisto quant -i ../scratch/transcripts.idx -o ../results/testing_one -b 10 --single -l 200 -s 8.65 ${forward_reads}
+    kallisto quant -i ../scratch/transcripts.idx -o ../results/testing_one -b 10 --single -l 199.757 -s 8.65 ${forward_reads}
 else
     # Quantification
     kallisto quant \
