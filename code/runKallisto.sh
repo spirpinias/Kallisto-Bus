@@ -14,7 +14,7 @@ then
     # Quantification
     kallisto quant \
     -i ../scratch/transcripts.idx \
-    -o ../results/testing_one \
+    -o ../results/ \
     ${num_boot} \
     --single \
     ${len_frag} \
