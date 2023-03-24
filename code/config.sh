@@ -26,19 +26,19 @@ else
 fi
 
 if [ -z "${3}" ]; then
-  len_frag="75"
+  len_frag=""
 else
-  len_frag="${3}"
+  len_frag="-l ${3}"
 fi
 
 if [ -z "${4}" ]; then
-  std_frag="8.5"
+  std_frag=""
 else
-  std_frag="${4}"
+  std_frag="-s ${4}"
 fi
 
 if [ -z "${5}" ]; then
-  num_boot="10"
+  num_boot=""
 else
-  num_boot="${5}"
+  num_boot="-b ${5}"
 fi
