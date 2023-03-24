@@ -18,6 +18,7 @@ gtf_file=$(find -L ../data -name "*.gtf")
 reference_count=$(echo $reference_file | wc -w) 
 forward_count=$(echo $forward_reads | wc -w)
 reverse_count=$(echo $reverse_reads | wc -w)
+gtf_count=$(echo $gtf_file | wc -w)
 
 # Kallisto
 
