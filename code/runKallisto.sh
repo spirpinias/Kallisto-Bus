@@ -40,4 +40,5 @@ then
         ${forward_reads} \
         ${reverse_reads}
     fi
+    echo "This tool requires one (.gtf) annotation and reference (.fasta, .fa) file.
 fi
