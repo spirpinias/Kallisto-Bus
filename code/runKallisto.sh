@@ -10,14 +10,13 @@ then
 
     if [ "${type_seq}" == "SingleEnded" ];
     then
+        echo "Running in Single End Mode!"
         flag_single="--single"
         read_flags="${forward_reads}"
-        
-        echo "Running in Single End Mode!"
     else
+        echo "Running in Paired End Mode!"
         flag_single=""
         read_flags="${forward_reads} ${reverse_reads}"
-        echo "Running in Paired End Mode!"
     fi
 
         # Quantification
