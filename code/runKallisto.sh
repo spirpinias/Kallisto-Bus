@@ -11,9 +11,12 @@ then
     if [ "${type_seq}" == "SingleEnded" ];
     then
         flag_single="--single"
+        read_flags="${forward_reads}"
+        
         echo "Running in Single End Mode!"
     else
         flag_single=""
+        read_flags="${forward_reads} ${reverse_reads}"
         echo "Running in Paired End Mode!"
     fi
 
@@ -24,10 +27,11 @@ then
         ${num_boot} \
         --pseudobam \
         --gtf ${gtf_file} \
+        ${flag_single} \
         --genomebam \
         ${len_frag} \
         ${std_frag} \
-        ${forward_reads} \
+        ${read_flags} \
         -t ${num_thread}
 else
     echo "This tool requires one (.gtf) annotation and reference (.fasta, .fa) file."
