@@ -21,8 +21,7 @@ then
         kallisto quant \
         -i ../scratch/transcripts.idx \
         -o ../results/ \
-        ${num_boot} \
-        #${flag_single} \
+        ${num_boot} \ 
         --pseudobam \
         --gtf ${gtf_file} \
         --genomebam \
