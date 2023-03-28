@@ -10,13 +10,19 @@ then
 
     if [ "${type_seq}" == "SingleEnded" ];
     then
-        echo "You are running in Single Ended Mode!"
+        flag_single="--single"
+        echo "Running in Single End Mode!"
+    else
+        flag_single=""
+        echo "Running in Paired End Mode!"
+    fi
+
         # Quantification
         kallisto quant \
         -i ../scratch/transcripts.idx \
         -o ../results/ \
         ${num_boot} \
-        --single \
+        ${flag_single} \
         --pseudobam \
         --gtf ${gtf_file} \
         --genomebam \
@@ -24,21 +30,6 @@ then
         ${std_frag} \
         ${forward_reads} \
         -t ${num_thread}
-    else
-        echo "You are running in Paired Ended Mode!"
-        # Quantification
-        kallisto quant \
-        -i ../scratch/transcripts.idx \
-        -o ../results/ \
-        -t ${num_thread} \
-        --pseudobam \
-        --gtf ${gtf_file} \
-        --genomebam \
-        ${num_boot} \
-        ${len_frag} \
-        ${std_frag} \
-        ${forward_reads} \
-        ${reverse_reads}
-    fi
+else
     echo "This tool requires one (.gtf) annotation and reference (.fasta, .fa) file."
 fi
