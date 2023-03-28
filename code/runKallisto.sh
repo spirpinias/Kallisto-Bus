@@ -6,7 +6,7 @@ if [ $reference_count -eq 1 ] && [ $gtf_count -eq 1 ];
 then
 
     # Construction of the Index    
-    echo "Consctructing the Index!"
+    echo "Constructing the Index!"
     kallisto index -i ../scratch/transcripts.idx ${reference_file} ${kmer_size}
 
     if [ "${type_seq}" == "SingleEnded" ];
@@ -21,7 +21,7 @@ then
     fi
         # Quantification
         echo "Beginning the Quantification!"
-        
+
         kallisto quant \
         -i ../scratch/transcripts.idx \
         -o ../results/ \
