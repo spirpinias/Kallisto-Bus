@@ -22,7 +22,7 @@ then
         -i ../scratch/transcripts.idx \
         -o ../results/ \
         ${num_boot} \
-        ${flag_single} \
+        #${flag_single} \
         --pseudobam \
         --gtf ${gtf_file} \
         --genomebam \
