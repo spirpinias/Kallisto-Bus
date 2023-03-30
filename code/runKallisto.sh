@@ -16,8 +16,9 @@ then
     -i ../scratch/transcripts.idx \
     -o ../results/ \
     -x 10xv3 \
-    ${total_reads} \
-    -t ${num_thread}
+    -t ${num_thread} \
+    ${total_reads} 
+    
 else
     echo "This tool requires one (.gtf) annotation and reference (.fasta, .fa) file."
 fi
