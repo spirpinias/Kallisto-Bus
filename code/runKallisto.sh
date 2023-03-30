@@ -15,9 +15,9 @@ then
     kallisto bus \
     -i ../scratch/transcripts.idx \
     -o ../results/ \
-    -B ${total_reads} \
+    -x 10xv3 \
+    ${total_reads} \
     -t ${num_thread}
 else
     echo "This tool requires one (.gtf) annotation and reference (.fasta, .fa) file."
 fi
-##-x "10xv3" \
