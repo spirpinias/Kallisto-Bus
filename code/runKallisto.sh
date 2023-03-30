@@ -9,14 +9,13 @@ then
     echo "Constructing the Index!"
     kallisto index -i ../scratch/transcripts.idx ${reference_file} ${kmer_size}
 
-
     # Quantification
     echo "Beginning the Quantification!"
 
     kallisto bus \
     -i ../scratch/transcripts.idx \
     -o ../results/ \
-    -x 10xv3 \
+    -x "10xv3" \
     -B ${total_reads} \
     -t ${num_thread}
 else
