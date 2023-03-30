@@ -10,7 +10,7 @@ then
     kallisto index -i ../scratch/transcripts.idx ${reference_file} ${kmer_size}
 
     # Quantification
-    echo "Beginning the Quantification!"
+    echo "Beginning the Creation of the BUS File!"
 
     kallisto bus \
     -i ../scratch/transcripts.idx \
