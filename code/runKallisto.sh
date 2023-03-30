@@ -2,7 +2,7 @@
 
 source ./config.sh
 
-if [ $reference_count -eq 1 ] && [ $gtf_count -eq 1 ];
+if [ $reference_count -eq 1 ];
 then
 
     # Construction of the Index    
