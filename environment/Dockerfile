@@ -1,4 +1,4 @@
-# hash:sha256:28a08f4e3fa5bfc3b890fff317e2efa7299f068cf709572fcc048388457d3898
+# hash:sha256:35dfa2fe82d9a2b25a85ba94329d8b8ca8f6c98d4af613eb8fbbc3db194b0847
 FROM registry.apps.codeocean.com/codeocean/mambaforge:22.9.0-3
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -9,7 +9,7 @@ COPY git-askpass /
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        wget \
+        wget=1.20.3-1ubuntu2 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN conda install -y --channel=defaults --channel=bioconda --channel=conda-forge \
