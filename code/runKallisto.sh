@@ -17,10 +17,12 @@ then
 
         kallisto bus \
         -i ../scratch/transcripts.idx \
-        -o ../results/${output_prefix} \
+        -o ../results/ \
         ${chem_type} \
         -t ${num_thread} \
         ${total_reads} 
+
+        mv ../results/output.bus ../results/${output_prefix}.bus
     else
         echo "No Sequencing Files Found! (.Fastq.gz)!"
     fi
