@@ -14,7 +14,7 @@ then
 
     kallisto bus \
     -i ../scratch/transcripts.idx \
-    -o ../results/ \
+    -o ../results/testing \
     -x 10xv3 \
     -t ${num_thread} \
     ${total_reads} 
