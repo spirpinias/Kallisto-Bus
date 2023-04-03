@@ -26,5 +26,5 @@ then
     fi
     
 else
-    echo "This tool requires one (.gtf) annotation and reference (.fasta, .fa) file."
+    echo "This tool requires one reference sequence (.fasta, .fa) file."
 fi
