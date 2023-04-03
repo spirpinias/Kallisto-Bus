@@ -9,7 +9,7 @@ then
     echo "Constructing the Index!"
     kallisto index -i ../scratch/transcripts.idx ${reference_file} ${kmer_size}
 
-    if [ $total_reads_count -gt 0 ] && if [ $(($total_reads_count % 2)) -eq "0" ];
+    if [ $total_reads_count -gt 0 ] && [ $(($total_reads_count % 2)) -eq "0" ];
     then
 
         # Quantification
