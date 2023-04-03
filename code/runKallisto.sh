@@ -22,7 +22,7 @@ then
         -t ${num_thread} \
         ${total_reads} 
     else
-        echo "No .Fastq.gz files were Found!"
+        echo "No Sequencing Files Found! (.Fastq.gz)!"
     fi
     
 else
