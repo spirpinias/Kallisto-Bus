@@ -11,14 +11,10 @@ else
 fi
 
 reference_file=$(find -L ../data -name "*.fasta" -o -name "*.fa")
+reference_count=$(echo $reference_file | wc -w)
 total_reads=$(find -L ../data -name "*_R1_*" -o -name "*_R2_*" -o -name "*_R1.fastq.gz" -o -name "*_R2.fastq.gz")
-
-gtf_file=$(find -L ../data -name "*.gtf")
-
-reference_count=$(echo $reference_file | wc -w) 
-forward_count=$(echo $forward_reads | wc -w)
-reverse_count=$(echo $reverse_reads | wc -w)
-gtf_count=$(echo $gtf_file | wc -w)
+total_reads_count=$(echo $total_reads | wc -w)
+ 
 
 # Kallisto
 
