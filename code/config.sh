@@ -29,3 +29,15 @@ if [ -z "${2}" ]; then
 else
   kmer_size="-k ${2}"
 fi
+
+if [ -z "${3}" ]; then
+  output_prefix="finalResult"
+else
+  output_prefix="${3}"
+fi
+
+if [ -z "${4}" ]; then
+  chem_type=""
+else
+  chem_type="-x ${4}"
+fi

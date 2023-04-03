@@ -17,8 +17,8 @@ then
 
         kallisto bus \
         -i ../scratch/transcripts.idx \
-        -o ../results/testing \
-        -x 10xv3 \
+        -o ../results/${output_prefix} \
+        ${chem_type} \
         -t ${num_thread} \
         ${total_reads} 
     else
