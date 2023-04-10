@@ -27,6 +27,10 @@ Number of Bootstraps k > 0
 
 Kmer Size for DeBruijn Graph Int < 31 (Odd)
 
+Prefix for Bus File 
+
+Chemistry Type - See Drop Down Menu
+
 ## Source 
 
 https://pachterlab.github.io/kallisto/about
